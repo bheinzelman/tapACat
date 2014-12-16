@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6185.7" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EndGameViewController" customModule="tapACat" customModuleProvider="target">
+            <connections>
+                <outlet property="adBannerView" destination="RHl-uY-jPT" id="eXd-g1-AGn"/>
+                <outlet property="labelOne" destination="CmA-ns-1PD" id="f60-jO-n74"/>
+                <outlet property="labelTwo" destination="0YU-n3-C99" id="k9F-ga-H04"/>
+                <outlet property="mainMenu" destination="mVL-yv-E4K" id="0aY-Ja-3SI"/>
+                <outlet property="playAgainButton" destination="4Vj-kS-YPt" id="ajP-Lt-omd"/>
+                <outlet property="view" destination="Ata-oy-uRe" id="oMy-62-Q6N"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Ata-oy-uRe">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GameOver" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CmA-ns-1PD">
+                    <rect key="frame" x="112" y="43" width="97" height="23"/>
+                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You did not Tap the Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YU-n3-C99">
+                    <rect key="frame" x="20" y="82" width="280" height="21"/>
+                    <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="20"/>
+                    <color key="textColor" red="0.97866423229999999" green="0.97866423229999999" blue="0.97866423229999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vj-kS-YPt">
+                    <rect key="frame" x="126" y="448" width="69" height="30"/>
+                    <state key="normal" title="PlayAgain">
+                        <color key="titleColor" red="0.30088358869999998" green="0.95368081130000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="playAgainPressed:" destination="-1" eventType="touchUpInside" id="t9S-4f-sdY"/>
+                    </connections>
+                </button>
+                <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RHl-uY-jPT">
+                    <rect key="frame" x="0.0" y="520" width="320" height="50"/>
+                </adBannerView>
+                <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVL-yv-E4K">
+                    <rect key="frame" x="124" y="482" width="72" height="30"/>
+                    <state key="normal" title="MainMenu">
+                        <color key="titleColor" red="0.30088358869999998" green="0.95368081130000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                        <rect key="frame" x="110" y="545" width="100" height="30"/>
+                    </variation>
+                    <connections>
+                        <action selector="mainMenuButtonPressed:" destination="-1" eventType="touchUpInside" id="8iv-YI-cfm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.59500178560000005" green="0.071470156620000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="AbstractSizeClassScreen[heightClass=regular-widthClass=compact]">
+                <size key="portraitSize" width="320" height="640"/>
+                <size key="landscapeSize" width="320" height="640"/>
+            </simulatedScreenMetrics>
+            <point key="canvasLocation" x="-1" y="53"/>
+        </view>
+    </objects>
+</document>
