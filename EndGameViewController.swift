@@ -8,33 +8,88 @@
 
 import UIKit
 import iAd
+import AVFoundation
 
 class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextFieldDelegate{
     
-    @IBOutlet var labelOne:UILabel
-    @IBOutlet var labelTwo:UILabel
-    @IBOutlet var mainMenu:UIButton
-    @IBOutlet var playAgainButton: UIButton
-    @IBOutlet var adBannerView: ADBannerView
+    var gameOverLabel:UILabel
+    var labelTwo:UILabel
+    var mainMenu:UIButton
+    var playAgainButton: UIButton
+    var adBannerView: ADBannerView = ADBannerView()
     var score:Int
     var textField:UITextField
     var newHighScoreLabel = UILabel()
+    var acheivementEarned:Bool
+    var audioPlayer = AVAudioPlayer()
     
     
-    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, Score: Int) {
+    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?, Score: Int, acheivementEarned:Bool) {
         self.score = Score
+        gameOverLabel = UILabel()
+        labelTwo = UILabel()
+        mainMenu = UIButton()
+        playAgainButton = UIButton()
         self.textField = UITextField()
+        self.acheivementEarned = acheivementEarned
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addTheScore()
         self.addTextField()
+        let sizes = self.view.bounds.size
+        
+        //ganeoverlabel
+        gameOverLabel.frame = CGRectMake((sizes.width * (112/320)), (sizes.height * (43/568)), ((sizes.width * (97/320))), (sizes.height * (23/568)))
+        gameOverLabel.text = "GameOver"
+        gameOverLabel.textColor = UIColor.whiteColor()
+        gameOverLabel.font = UIFont(name: "Courier", size: 20)
+        self.view.addSubview(gameOverLabel)
+        
+        //labelTwo
+        labelTwo.frame = CGRectMake((sizes.width * (20/320)), (sizes.height * (82/568)), (sizes.width * (280/320)), (sizes.height * (21/568)))
+        labelTwo.text = "You did not tap the cat"
+        labelTwo.font = UIFont(name: "Courier", size: 20)
+        labelTwo.textColor = UIColor.whiteColor()
+        self.view.addSubview(labelTwo)
+        
+        //mainMenuButton
+        mainMenu.frame = CGRectMake((sizes.width * (119/320)), (sizes.height * (482/568)), (sizes.width * (85/320)), (sizes.height * (30/568)))
+        mainMenu.setTitle("MainMenu", forState: UIControlState.Normal)
+        mainMenu.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
+        mainMenu.addTarget(self, action: "mainMenuButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(mainMenu)
+        
+        //play again
+        playAgainButton.frame = CGRectMake((sizes.width * (121/320)), (sizes.height * (448/568)), (sizes.width * (81/320)), (sizes.height * (30/568)))
+        playAgainButton.setTitle("PlayAgain", forState: UIControlState.Normal)
+        playAgainButton.setTitleColor(UIColor.cyanColor(), forState: UIControlState.Normal)
+        playAgainButton.addTarget(self, action: "playAgainPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(playAgainButton)
+        
+        //adbanner
+        let height = (sizes.height * (50/568))
+        adBannerView.frame = CGRectMake(0, sizes.height-height, sizes.width, height)
+        self.view.addSubview(adBannerView)
         self.canDisplayBannerAds = true
         self.adBannerView.delegate = self
         self.adBannerView.alpha = 0.0
+        
+        var outOfGameAchievement = checkAchievements()
+        //acheivement
+        if (acheivementEarned || outOfGameAchievement) {
+            var alert = UIAlertView(title: "Achievement", message: "You Earned an Achievement!", delegate: nil, cancelButtonTitle: "Done")
+            alert.show()
+        }
+        
+        addStats()
         
     }
 
@@ -47,7 +102,8 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
     pre: main menu button pressed
     post: introview is loaded
 */
-    @IBAction func mainMenuButtonPressed(sender : AnyObject) {
+    func mainMenuButtonPressed() {
+        buttonSound()
         let mainMenu = introView(nibName: "introViewController", bundle: nil)
         self.presentViewController(mainMenu, animated: true, completion: nil)
     }
@@ -57,9 +113,10 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
     pre: play again is pressed
     post: play view controller is loaded
 */
-    @IBAction func playAgainPressed(sender: AnyObject) {
-        let playAgain = playViewController(nibName: "playViewController", bundle: nil)
-        self.presentViewController(playAgain, animated: true, completion: nil)
+    func playAgainPressed() {
+        buttonSound()
+        let catSelect = CatSelectViewController(nibName: "CatSelectViewController", bundle: nil)
+        self.presentViewController(catSelect, animated: true, completion: nil)
     }
     
 /* 
@@ -67,7 +124,8 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
     post: score is posted
 */
     func addTheScore() {
-        let label = UILabel(frame: CGRectMake(50, 205, 300, 25))
+        let sizes = self.view.bounds.size
+        let label = UILabel(frame: CGRectMake((sizes.width * (50/320)), (sizes.height * (205/568)), (sizes.width * (300/320)), (sizes.height * (25/668))))
         if (score == 1) {
             label.text = "You tapped \(score) cat"
         }
@@ -77,7 +135,7 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
         label.textColor = UIColor.whiteColor()
         label.font = UIFont(name: "Courier New", size: 20)
         
-        self.view!.addSubview(label)
+        self.view.addSubview(label)
     }
     
 /*
@@ -86,9 +144,10 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
 */
     func addTextField() {
         var store = NameScoreStore()
+        let sizes = self.view.bounds.size
         if (store.addNewScoreCheck(CInt(score))) {
             self.addNewHighScoreLabel()
-            textField.frame = CGRectMake(85, 322, 150, 21)
+            textField.frame = CGRectMake((sizes.width * (85/320)), (sizes.height * (322/568)), (sizes.width * (150/320)), (sizes.height * (21/568)))
             textField.borderStyle = UITextBorderStyle.RoundedRect
             textField.adjustsFontSizeToFitWidth = true
             textField.placeholder = "Enter Your Name!"
@@ -114,7 +173,7 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
     pre: textField.text length is 8
     post: no more chars allowed for input
 */
-    func textField(textField: UITextField!,shouldChangeCharactersInRange range: NSRange, replacementString string: String!) -> Bool {
+    func textField(textField: UITextField,shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         var one =  countString(textField.text)
         var two = countString(string)
         var three = range.length
@@ -156,34 +215,104 @@ class EndGameViewController: UIViewController, ADBannerViewDelegate, UITextField
     }
     
     func addNewHighScoreLabel() {
-        newHighScoreLabel.frame = CGRectMake(78, 290, 230, 26)
+        let sizes = self.view.bounds.size
+        newHighScoreLabel.frame = CGRectMake((sizes.width * (78/320)), (sizes.height * (290/568)), (sizes.width * (230/320)), (sizes.height * (26/568)))
         newHighScoreLabel.text = "New HighScore!"
         newHighScoreLabel.font = UIFont(name: "Courier New", size: 20)
         newHighScoreLabel.textColor = UIColor.whiteColor()
-        self.view!.addSubview(newHighScoreLabel)
+        self.view.addSubview(newHighScoreLabel)
     }
     
-    func bannerViewWillLoadAd(banner: ADBannerView!) {
+    func addStats(){
+        var stats = GameDataStore()
+        stats.stats.addScore(Int32(self.score))
+        stats.stats.gamePlayed()
+        stats.saveChanges()
+        println("cats tapped: \(stats.stats.getCatsTapped())")
+    }
+    
+    func checkAchievements()->Bool {
+        var stats = GameDataStore()
+        var ach = CompletedStore()
+        if (stats.stats.getCatsTapped() >= 5000) {
+            if (!ach.getItemAtIndex(Int32(7)).getBOOL()) {
+                var completed = ach.getItemAtIndex(Int32(7))
+                completed.setTRUE()
+                ach.addItemAtIndex(Int32(7), item: completed)
+                ach.saveChanges()
+                return true
+            }
+        }
+        if (stats.stats.getCatsTapped() >= 10000) {
+            if (!ach.getItemAtIndex(Int32(8)).getBOOL()) {
+                var completed = ach.getItemAtIndex(Int32(8))
+                completed.setTRUE()
+                ach.addItemAtIndex(Int32(8), item: completed)
+                ach.saveChanges()
+                return true
+            }
+
+        }
+        if (stats.stats.getDogsTapped() >= 100) {
+            if (!ach.getItemAtIndex(Int32(9)).getBOOL()) {
+                var completed = ach.getItemAtIndex(Int32(9))
+                completed.setTRUE()
+                ach.addItemAtIndex(Int32(9), item: completed)
+                ach.saveChanges()
+                return true
+            }
+        }
+        if (stats.stats.getDogsTapped() >= 1000) {
+            if (!ach.getItemAtIndex(Int32(10)).getBOOL()) {
+                var completed = ach.getItemAtIndex(Int32(10))
+                completed.setTRUE()
+                ach.addItemAtIndex(Int32(10), item: completed)
+                ach.saveChanges()
+                return true
+            }
+        }
+        if (stats.stats.getGamesPlayed() >= 1000) {
+            if (!ach.getItemAtIndex(Int32(11)).getBOOL()) {
+                var completed = ach.getItemAtIndex(Int32(11))
+                completed.setTRUE()
+                ach.addItemAtIndex(Int32(11), item: completed)
+                ach.saveChanges()
+                return true
+            }
+        }
+        return false
+    }
+    
+    func buttonSound() {
+        let  mainBundle = NSBundle.mainBundle()
+        let filePath:String = mainBundle.pathForResource("button", ofType: "wav")!
+        let fileData:NSData = NSData.dataWithContentsOfFile(filePath, options: nil, error: nil)
+        self.audioPlayer = AVAudioPlayer(data: fileData, error: nil)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+    }
+    
+    func bannerViewWillLoadAd(banner: ADBannerView) {
         //self.adBannerView.alpha = 0.0
         //banner.alpha = 0.0
     }
     
-    func bannerViewDidLoadAd(banner: ADBannerView!) {
+    func bannerViewDidLoadAd(banner: ADBannerView) {
         NSLog("bannerViewDidLoadAd")
         self.adBannerView.alpha = 1.0 //now show banner as ad is loaded
         banner.alpha = 1.0
     }
     
-    func bannerViewActionDidFinish(banner: ADBannerView!) {
+    func bannerViewActionDidFinish(banner: ADBannerView) {
         NSLog("bannerViewDidLoadAd")
     }
     
-    func bannerViewActionShouldBegin(banner: ADBannerView!, willLeaveApplication willLeave: Bool) -> Bool {
+    func bannerViewActionShouldBegin(banner: ADBannerView, willLeaveApplication willLeave: Bool) -> Bool {
         NSLog("bannerViewActionShouldBegin")
         return willLeave //I do not know if that is the correct return statement
     }
     
-    func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
+    func bannerView(banner: ADBannerView, didFailToReceiveAdWithError error: NSError) {
         NSLog("bannerView")
     }
     
