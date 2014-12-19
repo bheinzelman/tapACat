@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB18B921199031A8005EBA05 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB18B920199031A8005EBA05 /* HeaderView.swift */; };
+		BB18B92B199165D3005EBA05 /* CompletedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BB18B92A199165D3005EBA05 /* CompletedItem.m */; };
+		BB18B92E19916803005EBA05 /* CompletedStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BB18B92D19916803005EBA05 /* CompletedStore.m */; };
+		BB2406FC1985DD6000B2CE94 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2406FB1985DD6000B2CE94 /* dog.png */; };
+		BB2713EB19A9200A00F5380E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB2713EA19A9200A00F5380E /* Images.xcassets */; };
+		BB2713ED19A9207600F5380E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB2713EC19A9207600F5380E /* Default-568h@2x.png */; };
+		BB2713EF19ABDC4400F5380E /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB2713EE19ABDC4400F5380E /* button.wav */; };
+		BB82051F19A12AAA00B2FF95 /* GameDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82051E19A12AAA00B2FF95 /* GameDataItem.m */; };
+		BB82052219A12C9E00B2FF95 /* GameDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BB82052119A12C9E00B2FF95 /* GameDataStore.m */; };
+		BB82052619A27C1300B2FF95 /* CatMeow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB82052519A27C1300B2FF95 /* CatMeow.mp3 */; };
+		BB82052C19A2B21900B2FF95 /* dogBark.wav in Resources */ = {isa = PBXBuildFile; fileRef = BB82052B19A2B21900B2FF95 /* dogBark.wav */; };
+		BB82058819A2D92D00B2FF95 /* cartoon-cat2.png in Resources */ = {isa = PBXBuildFile; fileRef = BB82058719A2D92D00B2FF95 /* cartoon-cat2.png */; };
+		BB82058C19A2D9A800B2FF95 /* CatSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82058A19A2D9A800B2FF95 /* CatSelectViewController.swift */; };
+		BB82058D19A2D9A800B2FF95 /* CatSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB82058B19A2D9A800B2FF95 /* CatSelectViewController.xib */; };
+		BB8737D919AC1AFF00902AF3 /* madCat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BB8737D819AC1AFD00902AF3 /* madCat.mp3 */; };
+		BB9EE639198B08A900420B35 /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9EE637198B08A900420B35 /* HighScoreViewController.swift */; };
+		BB9EE63A198B08A900420B35 /* HighScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB9EE638198B08A900420B35 /* HighScoreViewController.xib */; };
+		BBB78E6919A6AE23009ED73D /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB78E6819A6AE23009ED73D /* SquareView.swift */; };
+		BBD5D55619CBB4B500DAA28D /* Tap-A-Cat(cat).png in Resources */ = {isa = PBXBuildFile; fileRef = BBD5D55519CBB4B500DAA28D /* Tap-A-Cat(cat).png */; };
+		BBE7F01519F303F6004BFFE4 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE7F01419F303F6004BFFE4 /* play.png */; };
+		BBE7F01819F3068B004BFFE4 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE7F01619F3068B004BFFE4 /* help.png */; };
+		BBE7F01919F3068B004BFFE4 /* highscores.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE7F01719F3068B004BFFE4 /* highscores.png */; };
+		BBE7F01C19F307DD004BFFE4 /* MainMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE7F01A19F307DD004BFFE4 /* MainMenu.png */; };
+		BBE7F01D19F307DD004BFFE4 /* playagain.png in Resources */ = {isa = PBXBuildFile; fileRef = BBE7F01B19F307DD004BFFE4 /* playagain.png */; };
+		BBF0BA44195DF4CC009DF682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA43195DF4CC009DF682 /* AppDelegate.swift */; };
+		BBF0BA52195DF4CC009DF682 /* tapACatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA51195DF4CC009DF682 /* tapACatTests.swift */; };
+		BBF0BA5C195DF4FB009DF682 /* boardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA5B195DF4FB009DF682 /* boardView.swift */; };
+		BBF0BA69195DF518009DF682 /* CATFACE.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF0BA5D195DF518009DF682 /* CATFACE.png */; };
+		BBF0BA6A195DF518009DF682 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA5E195DF518009DF682 /* EndGameViewController.swift */; };
+		BBF0BA6B195DF518009DF682 /* EndGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF0BA5F195DF518009DF682 /* EndGameViewController.xib */; };
+		BBF0BA6C195DF518009DF682 /* helpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA60195DF518009DF682 /* helpViewController.swift */; };
+		BBF0BA6D195DF518009DF682 /* helpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF0BA61195DF518009DF682 /* helpViewController.xib */; };
+		BBF0BA70195DF518009DF682 /* introView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA64195DF518009DF682 /* introView.swift */; };
+		BBF0BA71195DF518009DF682 /* introViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF0BA65195DF518009DF682 /* introViewController.xib */; };
+		BBF0BA73195DF518009DF682 /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA67195DF518009DF682 /* playViewController.swift */; };
+		BBF0BA74195DF518009DF682 /* playViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBF0BA68195DF518009DF682 /* playViewController.xib */; };
+		BBF0BA81195DF8A5009DF682 /* NameScoreItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA7E195DF8A5009DF682 /* NameScoreItem.m */; };
+		BBF0BA82195DF8A5009DF682 /* NameScoreStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF0BA80195DF8A5009DF682 /* NameScoreStore.m */; };
+		BBF2CE8D198C50B4007C310E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB55DB36198C4BC70011CDE7 /* Foundation.framework */; };
+		BBF2CE8E198C50BB007C310E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9EE6301988C2A100420B35 /* AudioToolbox.framework */; };
+		BBF2CE8F198C50C1007C310E /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7E1B4319774C2100B29459 /* iAd.framework */; };
+		BBF2CE90198C50C9007C310E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF2CE8B198C4F4C007C310E /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBF0BA4C195DF4CC009DF682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBF0BA36195DF4CC009DF682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBF0BA3D195DF4CC009DF682;
+			remoteInfo = tapACat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB18B920199031A8005EBA05 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BB18B929199165D3005EBA05 /* CompletedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedItem.h; sourceTree = "<group>"; };
+		BB18B92A199165D3005EBA05 /* CompletedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedItem.m; sourceTree = "<group>"; };
+		BB18B92C19916803005EBA05 /* CompletedStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompletedStore.h; sourceTree = "<group>"; };
+		BB18B92D19916803005EBA05 /* CompletedStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompletedStore.m; sourceTree = "<group>"; };
+		BB2406FB1985DD6000B2CE94 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = SOURCE_ROOT; };
+		BB2713EA19A9200A00F5380E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		BB2713EC19A9207600F5380E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BB2713EE19ABDC4400F5380E /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
+		BB55DB36198C4BC70011CDE7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BB7E1B4319774C2100B29459 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		BB82051D19A12AAA00B2FF95 /* GameDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataItem.h; sourceTree = "<group>"; };
+		BB82051E19A12AAA00B2FF95 /* GameDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataItem.m; sourceTree = "<group>"; };
+		BB82052019A12C9E00B2FF95 /* GameDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDataStore.h; sourceTree = "<group>"; };
+		BB82052119A12C9E00B2FF95 /* GameDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameDataStore.m; sourceTree = "<group>"; };
+		BB82052519A27C1300B2FF95 /* CatMeow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CatMeow.mp3; sourceTree = "<group>"; };
+		BB82052B19A2B21900B2FF95 /* dogBark.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dogBark.wav; sourceTree = "<group>"; };
+		BB82058719A2D92D00B2FF95 /* cartoon-cat2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cartoon-cat2.png"; sourceTree = "<group>"; };
+		BB82058A19A2D9A800B2FF95 /* CatSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatSelectViewController.swift; sourceTree = "<group>"; };
+		BB82058B19A2D9A800B2FF95 /* CatSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatSelectViewController.xib; sourceTree = "<group>"; };
+		BB8737D819AC1AFD00902AF3 /* madCat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = madCat.mp3; sourceTree = "<group>"; };
+		BB9EE6301988C2A100420B35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BB9EE637198B08A900420B35 /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = SOURCE_ROOT; };
+		BB9EE638198B08A900420B35 /* HighScoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HighScoreViewController.xib; sourceTree = SOURCE_ROOT; };
+		BBB78E6819A6AE23009ED73D /* SquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		BBD5D55519CBB4B500DAA28D /* Tap-A-Cat(cat).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tap-A-Cat(cat).png"; sourceTree = SOURCE_ROOT; };
+		BBE7F01419F303F6004BFFE4 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = SOURCE_ROOT; };
+		BBE7F01619F3068B004BFFE4 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help.png; sourceTree = SOURCE_ROOT; };
+		BBE7F01719F3068B004BFFE4 /* highscores.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = highscores.png; sourceTree = SOURCE_ROOT; };
+		BBE7F01A19F307DD004BFFE4 /* MainMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainMenu.png; sourceTree = SOURCE_ROOT; };
+		BBE7F01B19F307DD004BFFE4 /* playagain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playagain.png; sourceTree = SOURCE_ROOT; };
+		BBF0BA3E195DF4CC009DF682 /* tapACat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tapACat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF0BA42195DF4CC009DF682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF0BA43195DF4CC009DF682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBF0BA4B195DF4CC009DF682 /* tapACatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tapACatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF0BA50195DF4CC009DF682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF0BA51195DF4CC009DF682 /* tapACatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tapACatTests.swift; sourceTree = "<group>"; };
+		BBF0BA5B195DF4FB009DF682 /* boardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = boardView.swift; sourceTree = "<group>"; };
+		BBF0BA5D195DF518009DF682 /* CATFACE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CATFACE.png; sourceTree = "<group>"; };
+		BBF0BA5E195DF518009DF682 /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		BBF0BA5F195DF518009DF682 /* EndGameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EndGameViewController.xib; sourceTree = "<group>"; };
+		BBF0BA60195DF518009DF682 /* helpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpViewController.swift; sourceTree = "<group>"; };
+		BBF0BA61195DF518009DF682 /* helpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = helpViewController.xib; sourceTree = "<group>"; };
+		BBF0BA64195DF518009DF682 /* introView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = introView.swift; sourceTree = "<group>"; };
+		BBF0BA65195DF518009DF682 /* introViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = introViewController.xib; sourceTree = "<group>"; };
+		BBF0BA67195DF518009DF682 /* playViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
+		BBF0BA68195DF518009DF682 /* playViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = playViewController.xib; sourceTree = "<group>"; };
+		BBF0BA7D195DF8A5009DF682 /* NameScoreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameScoreItem.h; sourceTree = "<group>"; };
+		BBF0BA7E195DF8A5009DF682 /* NameScoreItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameScoreItem.m; sourceTree = "<group>"; };
+		BBF0BA7F195DF8A5009DF682 /* NameScoreStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameScoreStore.h; sourceTree = "<group>"; };
+		BBF0BA80195DF8A5009DF682 /* NameScoreStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameScoreStore.m; sourceTree = "<group>"; };
+		BBF0BA84195DF9F3009DF682 /* tapACat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "tapACat-Bridging-Header.h"; sourceTree = "<group>"; };
+		BBF2CE8B198C4F4C007C310E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBF0BA3B195DF4CC009DF682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF2CE90198C50C9007C310E /* UIKit.framework in Frameworks */,
+				BBF2CE8F198C50C1007C310E /* iAd.framework in Frameworks */,
+				BBF2CE8E198C50BB007C310E /* AudioToolbox.framework in Frameworks */,
+				BBF2CE8D198C50B4007C310E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF0BA48195DF4CC009DF682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB82058919A2D98800B2FF95 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BB8737D819AC1AFD00902AF3 /* madCat.mp3 */,
+				BB2713EE19ABDC4400F5380E /* button.wav */,
+				BB82052B19A2B21900B2FF95 /* dogBark.wav */,
+				BB82052519A27C1300B2FF95 /* CatMeow.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
+		BBE48BE3197DF67700CA818D /* png */ = {
+			isa = PBXGroup;
+			children = (
+				BBE7F01A19F307DD004BFFE4 /* MainMenu.png */,
+				BBE7F01B19F307DD004BFFE4 /* playagain.png */,
+				BBE7F01619F3068B004BFFE4 /* help.png */,
+				BBE7F01719F3068B004BFFE4 /* highscores.png */,
+				BBE7F01419F303F6004BFFE4 /* play.png */,
+				BBD5D55519CBB4B500DAA28D /* Tap-A-Cat(cat).png */,
+				BB82058719A2D92D00B2FF95 /* cartoon-cat2.png */,
+				BB2406FB1985DD6000B2CE94 /* dog.png */,
+				BBF0BA5D195DF518009DF682 /* CATFACE.png */,
+			);
+			name = png;
+			sourceTree = "<group>";
+		};
+		BBF0BA35195DF4CC009DF682 = {
+			isa = PBXGroup;
+			children = (
+				BB2713EC19A9207600F5380E /* Default-568h@2x.png */,
+				BBF2CE8B198C4F4C007C310E /* UIKit.framework */,
+				BB55DB36198C4BC70011CDE7 /* Foundation.framework */,
+				BB9EE6301988C2A100420B35 /* AudioToolbox.framework */,
+				BB7E1B4319774C2100B29459 /* iAd.framework */,
+				BBF0BA84195DF9F3009DF682 /* tapACat-Bridging-Header.h */,
+				BBF0BA40195DF4CC009DF682 /* tapACat */,
+				BBF0BA4E195DF4CC009DF682 /* tapACatTests */,
+				BBF0BA3F195DF4CC009DF682 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBF0BA3F195DF4CC009DF682 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0BA3E195DF4CC009DF682 /* tapACat.app */,
+				BBF0BA4B195DF4CC009DF682 /* tapACatTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF0BA40195DF4CC009DF682 /* tapACat */ = {
+			isa = PBXGroup;
+			children = (
+				BB82058A19A2D9A800B2FF95 /* CatSelectViewController.swift */,
+				BB82058B19A2D9A800B2FF95 /* CatSelectViewController.xib */,
+				BB82058919A2D98800B2FF95 /* sounds */,
+				BBE48BE3197DF67700CA818D /* png */,
+				BBF0BA85195E28E3009DF682 /* Data */,
+				BBF0BA5E195DF518009DF682 /* EndGameViewController.swift */,
+				BB9EE637198B08A900420B35 /* HighScoreViewController.swift */,
+				BB18B920199031A8005EBA05 /* HeaderView.swift */,
+				BB9EE638198B08A900420B35 /* HighScoreViewController.xib */,
+				BBF0BA5F195DF518009DF682 /* EndGameViewController.xib */,
+				BBF0BA60195DF518009DF682 /* helpViewController.swift */,
+				BBB78E6819A6AE23009ED73D /* SquareView.swift */,
+				BBF0BA61195DF518009DF682 /* helpViewController.xib */,
+				BBF0BA64195DF518009DF682 /* introView.swift */,
+				BBF0BA65195DF518009DF682 /* introViewController.xib */,
+				BBF0BA67195DF518009DF682 /* playViewController.swift */,
+				BBF0BA68195DF518009DF682 /* playViewController.xib */,
+				BBF0BA43195DF4CC009DF682 /* AppDelegate.swift */,
+				BBF0BA5B195DF4FB009DF682 /* boardView.swift */,
+				BB2713EA19A9200A00F5380E /* Images.xcassets */,
+				BBF0BA41195DF4CC009DF682 /* Supporting Files */,
+			);
+			path = tapACat;
+			sourceTree = "<group>";
+		};
+		BBF0BA41195DF4CC009DF682 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0BA42195DF4CC009DF682 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBF0BA4E195DF4CC009DF682 /* tapACatTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0BA51195DF4CC009DF682 /* tapACatTests.swift */,
+				BBF0BA4F195DF4CC009DF682 /* Supporting Files */,
+			);
+			path = tapACatTests;
+			sourceTree = "<group>";
+		};
+		BBF0BA4F195DF4CC009DF682 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0BA50195DF4CC009DF682 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBF0BA85195E28E3009DF682 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BB18B929199165D3005EBA05 /* CompletedItem.h */,
+				BB18B92A199165D3005EBA05 /* CompletedItem.m */,
+				BB18B92C19916803005EBA05 /* CompletedStore.h */,
+				BB18B92D19916803005EBA05 /* CompletedStore.m */,
+				BBF0BA7D195DF8A5009DF682 /* NameScoreItem.h */,
+				BBF0BA7E195DF8A5009DF682 /* NameScoreItem.m */,
+				BBF0BA7F195DF8A5009DF682 /* NameScoreStore.h */,
+				BBF0BA80195DF8A5009DF682 /* NameScoreStore.m */,
+				BB82051D19A12AAA00B2FF95 /* GameDataItem.h */,
+				BB82051E19A12AAA00B2FF95 /* GameDataItem.m */,
+				BB82052019A12C9E00B2FF95 /* GameDataStore.h */,
+				BB82052119A12C9E00B2FF95 /* GameDataStore.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBF0BA3D195DF4CC009DF682 /* tapACat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF0BA55195DF4CC009DF682 /* Build configuration list for PBXNativeTarget "tapACat" */;
+			buildPhases = (
+				BBF0BA3A195DF4CC009DF682 /* Sources */,
+				BBF0BA3B195DF4CC009DF682 /* Frameworks */,
+				BBF0BA3C195DF4CC009DF682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tapACat;
+			productName = tapACat;
+			productReference = BBF0BA3E195DF4CC009DF682 /* tapACat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBF0BA4A195DF4CC009DF682 /* tapACatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF0BA58195DF4CC009DF682 /* Build configuration list for PBXNativeTarget "tapACatTests" */;
+			buildPhases = (
+				BBF0BA47195DF4CC009DF682 /* Sources */,
+				BBF0BA48195DF4CC009DF682 /* Frameworks */,
+				BBF0BA49195DF4CC009DF682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF0BA4D195DF4CC009DF682 /* PBXTargetDependency */,
+			);
+			name = tapACatTests;
+			productName = tapACatTests;
+			productReference = BBF0BA4B195DF4CC009DF682 /* tapACatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBF0BA36195DF4CC009DF682 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Tog inc.";
+				TargetAttributes = {
+					BBF0BA3D195DF4CC009DF682 = {
+						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = L8C378HAQ9;
+					};
+					BBF0BA4A195DF4CC009DF682 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = BBF0BA3D195DF4CC009DF682;
+					};
+				};
+			};
+			buildConfigurationList = BBF0BA39195DF4CC009DF682 /* Build configuration list for PBXProject "tapACat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BBF0BA35195DF4CC009DF682;
+			productRefGroup = BBF0BA3F195DF4CC009DF682 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBF0BA3D195DF4CC009DF682 /* tapACat */,
+				BBF0BA4A195DF4CC009DF682 /* tapACatTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBF0BA3C195DF4CC009DF682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF0BA6B195DF518009DF682 /* EndGameViewController.xib in Resources */,
+				BBE7F01519F303F6004BFFE4 /* play.png in Resources */,
+				BBE7F01D19F307DD004BFFE4 /* playagain.png in Resources */,
+				BBE7F01819F3068B004BFFE4 /* help.png in Resources */,
+				BB8737D919AC1AFF00902AF3 /* madCat.mp3 in Resources */,
+				BB82052C19A2B21900B2FF95 /* dogBark.wav in Resources */,
+				BBF0BA71195DF518009DF682 /* introViewController.xib in Resources */,
+				BBF0BA74195DF518009DF682 /* playViewController.xib in Resources */,
+				BB2713EF19ABDC4400F5380E /* button.wav in Resources */,
+				BBD5D55619CBB4B500DAA28D /* Tap-A-Cat(cat).png in Resources */,
+				BB2406FC1985DD6000B2CE94 /* dog.png in Resources */,
+				BB2713ED19A9207600F5380E /* Default-568h@2x.png in Resources */,
+				BB82058819A2D92D00B2FF95 /* cartoon-cat2.png in Resources */,
+				BB82052619A27C1300B2FF95 /* CatMeow.mp3 in Resources */,
+				BB2713EB19A9200A00F5380E /* Images.xcassets in Resources */,
+				BBF0BA69195DF518009DF682 /* CATFACE.png in Resources */,
+				BBF0BA6D195DF518009DF682 /* helpViewController.xib in Resources */,
+				BB9EE63A198B08A900420B35 /* HighScoreViewController.xib in Resources */,
+				BBE7F01C19F307DD004BFFE4 /* MainMenu.png in Resources */,
+				BBE7F01919F3068B004BFFE4 /* highscores.png in Resources */,
+				BB82058D19A2D9A800B2FF95 /* CatSelectViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF0BA49195DF4CC009DF682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBF0BA3A195DF4CC009DF682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF0BA73195DF518009DF682 /* playViewController.swift in Sources */,
+				BB9EE639198B08A900420B35 /* HighScoreViewController.swift in Sources */,
+				BBF0BA82195DF8A5009DF682 /* NameScoreStore.m in Sources */,
+				BB82052219A12C9E00B2FF95 /* GameDataStore.m in Sources */,
+				BBF0BA44195DF4CC009DF682 /* AppDelegate.swift in Sources */,
+				BBF0BA5C195DF4FB009DF682 /* boardView.swift in Sources */,
+				BBF0BA6A195DF518009DF682 /* EndGameViewController.swift in Sources */,
+				BBB78E6919A6AE23009ED73D /* SquareView.swift in Sources */,
+				BBF0BA81195DF8A5009DF682 /* NameScoreItem.m in Sources */,
+				BB18B921199031A8005EBA05 /* HeaderView.swift in Sources */,
+				BB18B92B199165D3005EBA05 /* CompletedItem.m in Sources */,
+				BB82051F19A12AAA00B2FF95 /* GameDataItem.m in Sources */,
+				BB82058C19A2D9A800B2FF95 /* CatSelectViewController.swift in Sources */,
+				BB18B92E19916803005EBA05 /* CompletedStore.m in Sources */,
+				BBF0BA6C195DF518009DF682 /* helpViewController.swift in Sources */,
+				BBF0BA70195DF518009DF682 /* introView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF0BA47195DF4CC009DF682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF0BA52195DF4CC009DF682 /* tapACatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBF0BA4D195DF4CC009DF682 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBF0BA3D195DF4CC009DF682 /* tapACat */;
+			targetProxy = BBF0BA4C195DF4CC009DF682 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BBF0BA53195DF4CC009DF682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBF0BA54195DF4CC009DF682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBF0BA56195DF4CC009DF682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bert Heinzelmam (L8C378HAQ9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bert Heinzelmam (L8C378HAQ9)";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = tapACat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2d80e684-812c-4024-a1a0-61a97161cff0";
+				SWIFT_OBJC_BRIDGING_HEADER = "tapACat-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BBF0BA57195DF4CC009DF682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bert Heinzelmam (L8C378HAQ9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bert Heinzelmam (L8C378HAQ9)";
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = tapACat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2d80e684-812c-4024-a1a0-61a97161cff0";
+				SWIFT_OBJC_BRIDGING_HEADER = "tapACat-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		BBF0BA59195DF4CC009DF682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tapACat.app/tapACat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tapACatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		BBF0BA5A195DF4CC009DF682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/tapACat.app/tapACat";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = tapACatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBF0BA39195DF4CC009DF682 /* Build configuration list for PBXProject "tapACat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF0BA53195DF4CC009DF682 /* Debug */,
+				BBF0BA54195DF4CC009DF682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF0BA55195DF4CC009DF682 /* Build configuration list for PBXNativeTarget "tapACat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF0BA56195DF4CC009DF682 /* Debug */,
+				BBF0BA57195DF4CC009DF682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF0BA58195DF4CC009DF682 /* Build configuration list for PBXNativeTarget "tapACatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF0BA59195DF4CC009DF682 /* Debug */,
+				BBF0BA5A195DF4CC009DF682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBF0BA36195DF4CC009DF682 /* Project object */;
+}
